@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "singularName": "commande",
+    "pluralName": "commandes",
+    "displayName": "commande",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "panier": {
+      "type": "json"
+    },
+    "code": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

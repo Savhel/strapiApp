@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commanders",
+  "info": {
+    "singularName": "commander",
+    "pluralName": "commanders",
+    "displayName": "commander",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "payement": {
+      "type": "integer",
+      "max": 3,
+      "min": 1
+    },
+    "panier": {
+      "type": "json",
+      "required": false
+    }
+  }
+}
