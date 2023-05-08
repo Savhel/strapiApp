@@ -35,6 +35,11 @@
     "panier": {
       "type": "json",
       "required": false
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
