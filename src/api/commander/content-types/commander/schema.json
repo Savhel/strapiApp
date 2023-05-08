@@ -40,6 +40,9 @@
       "type": "string",
       "required": false,
       "unique": false
+    },
+    "total": {
+      "type": "biginteger"
     }
   }
 }

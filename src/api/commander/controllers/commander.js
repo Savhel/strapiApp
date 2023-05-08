@@ -42,6 +42,7 @@ module.exports = createCoreController('api::commander.commander', ({ strapi })=>
                 adresse: info.adresse,
                 payement: info.payement,
                 code: info.code,
+                total: info.total,
               },
             });
             return (ctx.response.status = 200);
