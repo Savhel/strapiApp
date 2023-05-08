@@ -6,10 +6,11 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::commander.commander', ({ strapi })=>({
+module.exports = createCoreController('api::commander.commander', ({ strapi }) => ({
     async create(ctx) {
-        const { cart, info } = ctx.request.body;
-        if (!cart || !info) {
+        const { cart, info, total, code } = ctx.request.body;
+        //console.log(total, code);
+        if (!cart || !info || !total) {
             ctx.response.status = 400;
             return { error: "Le panier est vide !" };
         }
@@ -41,8 +42,8 @@ module.exports = createCoreController('api::commander.commander', ({ strapi })=>
                 email: info.email,
                 adresse: info.adresse,
                 payement: info.payement,
-                code: info.code,
-                total: info.total,
+                code: code,
+                total: total,
               },
             });
             return (ctx.response.status = 200);
