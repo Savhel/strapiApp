@@ -46,6 +46,7 @@ module.exports = createCoreController('api::commander.commander', ({ strapi }) =
                 total: total,
               },
             });
+            
             return (ctx.response.status = 200);
         } catch (error) {
             ctx.response.status = 500;
